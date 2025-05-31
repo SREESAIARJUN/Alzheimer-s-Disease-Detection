@@ -24,10 +24,10 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 SAMPLE_IMAGE_DIR = "sample_images"
 SAMPLE_IMAGES = {
-    "Sample 1 (Mild)": os.path.join(SAMPLE_IMAGE_DIR, "sample_mild.png"),
-    "Sample 2 (Moderate)": os.path.join(SAMPLE_IMAGE_DIR, "sample_moderate.png"),
-    "Sample 3 (Non-Demented)": os.path.join(SAMPLE_IMAGE_DIR, "sample_non.png"),
-    "Sample 4 (Very Mild)": os.path.join(SAMPLE_IMAGE_DIR, "sample_verymild.png"),
+    "Sample 1 (Mild)": os.path.join(SAMPLE_IMAGE_DIR, "sample_mild.jpg"),
+    "Sample 2 (Moderate)": os.path.join(SAMPLE_IMAGE_DIR, "sample_moderate.jpg"),
+    "Sample 3 (Non-Demented)": os.path.join(SAMPLE_IMAGE_DIR, "sample_non.jpg"),
+    "Sample 4 (Very Mild)": os.path.join(SAMPLE_IMAGE_DIR, "sample_verymild.jpg"),
 }
 
 # --- Model Definition (Must be the same as used for training) ---
