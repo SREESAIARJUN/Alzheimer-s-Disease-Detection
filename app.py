@@ -143,7 +143,7 @@ def load_alzheimer_model(local_model_path_param, model_url_param, expected_sha25
             #st.warning("Local model checksum mismatch. Re-downloading...")
             os.remove(local_model_path_param)
             if not download_file_from_url(model_url_param, local_model_path_param, expected_sha256_param): return None
-        else: #st.success("Local model integrity verified.")
+        #else: st.success("Local model integrity verified.")
     try:
         model = AlzheimerCNN(num_classes_model=num_classes_param)
         model.load_state_dict(torch.load(local_model_path_param, map_location=device_param))
