@@ -16,7 +16,7 @@ EXPECTED_SHA256 = "4dabbe0229ed2f118674eac834e7c5f5f05c648432fa641ed4e4ec68e363e
 LOCAL_MODEL_PATH = "alzheimer_cnn_model.pth"
 
 NUM_CLASSES = 4
-CLASS_NAMES = ['Mild Demented', 'Moderate Demented', 'Non Demented', 'Very Mild Demented']
+CLASS_NAMES = ['Mild Impairment', 'Moderate Impairment', 'No Impairment', 'Very Mild Impairment']
 IMAGE_SIZE = (128, 128)
 MODEL_MEAN = [0.485, 0.456, 0.406]
 MODEL_STD = [0.229, 0.224, 0.225]
@@ -26,7 +26,7 @@ SAMPLE_IMAGE_DIR = "sample_images"
 SAMPLE_IMAGES = {
     "Sample 1 (Mild)": os.path.join(SAMPLE_IMAGE_DIR, "sample_mild.jpg"),
     "Sample 2 (Moderate)": os.path.join(SAMPLE_IMAGE_DIR, "sample_moderate.jpg"),
-    "Sample 3 (Non-Demented)": os.path.join(SAMPLE_IMAGE_DIR, "sample_non.jpg"),
+    "Sample 3 (No Impairment)": os.path.join(SAMPLE_IMAGE_DIR, "sample_non.jpg"),
     "Sample 4 (Very Mild)": os.path.join(SAMPLE_IMAGE_DIR, "sample_verymild.jpg"),
 }
 
