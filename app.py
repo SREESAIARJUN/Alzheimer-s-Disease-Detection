@@ -135,15 +135,15 @@ def load_alzheimer_model(local_model_path_param, model_url_param, expected_sha25
         if not download_file_from_url(model_url_param, local_model_path_param, expected_sha256_param):
             return None
     else:
-        st.info(f"Found local model: {local_model_path_param}. Verifying integrity...")
+        #st.info(f"Found local model: {local_model_path_param}. Verifying integrity...")
         sha256_hash = hashlib.sha256()
         with open(local_model_path_param, 'rb') as f:
             for byte_block in iter(lambda: f.read(4096), b""): sha256_hash.update(byte_block)
         if sha256_hash.hexdigest() != expected_sha256_param:
-            st.warning("Local model checksum mismatch. Re-downloading...")
+            #st.warning("Local model checksum mismatch. Re-downloading...")
             os.remove(local_model_path_param)
             if not download_file_from_url(model_url_param, local_model_path_param, expected_sha256_param): return None
-        else: st.success("Local model integrity verified.")
+        else: #st.success("Local model integrity verified.")
     try:
         model = AlzheimerCNN(num_classes_model=num_classes_param)
         model.load_state_dict(torch.load(local_model_path_param, map_location=device_param))
@@ -151,7 +151,7 @@ def load_alzheimer_model(local_model_path_param, model_url_param, expected_sha25
         model.eval()
         return model
     except Exception as e:
-        st.error(f"Error loading model: {e}")
+        #st.error(f"Error loading model: {e}")
         return None
 
 def preprocess_image(image_pil, image_size_param, mean_param, std_param):
